@@ -41,7 +41,7 @@ nf0=1e3
 radius_well=xmax
 g=10*1e6*3600*3600;
 lproteins=1
-friction0=0.0005;friction=0;friction1=0;friction2=30;rc=10;number_corr=0 !!!!!!!!!!!!!!!!!!!PAS SUR QUE CE SOIT NECESSAIRE
+friction0=0.0005;friction=0;friction1=0;friction2=30;rc=10;number_corr=0 
 Din=1.0;Dext=5.0;finfty=1.0;ncritical=10
 ncelltable(1)=156;ncelltable(2)=312;ncelltable(3)=625;ncelltable(4)=1250;ncelltable(5)=2500;
 ncelltable(6)=2500;ncelltable(7)=2500;ncelltable(8)=2500;ncelltable(9)=2500;
@@ -332,7 +332,7 @@ end
 		friction_normal=6*pi*friction0*radiusagg*(1+0*radiusagg/distance)!+&
 		
 		friction_normal_opposite=6*pi*friction0*radiusagg+&
-		&friction2*surface*min(exp(-(radius_well-radius0)/lf),1.0) !j'ai rajouté la composante normalement parrallèle pour limiter la diffusion vers la normale
+		&friction2*surface*min(exp(-(radius_well-radius0)/lf),1.0) 
 		
 		friction_parallel=6*pi*friction0*radiusagg*(1-0*8/15*pi*min(log(distance/radiusagg),0.))+&
 		&friction2*surface*min(exp(-(radius_well-radius0)/lf),1.0)
@@ -412,7 +412,7 @@ end
 		radiusagg=((Vcellsagg1+Vmax1)/(4*pi/3))**(1./3.)
 	end if
 	
-	!ON s'occupe d'abord du bruit simple
+	!Simple noise
 	
 		amp_noise11=(amp_noise)
 		amp_noise1=amp_noise**2.
@@ -2084,4 +2084,5 @@ end
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!	
+
 
